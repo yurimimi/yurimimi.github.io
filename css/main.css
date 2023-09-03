@@ -10,6 +10,11 @@
     box-sizing: inherit;
 }
 
+::selection {
+    background-color: #1F769C;
+    color: white;
+}
+
 body {
     margin: 0;
 
@@ -26,22 +31,13 @@ body {
     background-color: var(--background);
     opacity: 1;
     background-size: 26px 26px;
-    background-image:  repeating-linear-gradient(to right, #d5d5d5, #d5d5d5 1.3px, var(--background) 1.3px, var(--background));
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 2rem 0 1.35rem;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-}
-
-h1 {
-    font-size: 2rem;
+    background-image: repeating-linear-gradient(
+        to right,
+        #d5d5d5,
+        #d5d5d5 1.3px,
+        var(--background) 1.3px,
+        var(--background)
+    );
 }
 
 main {
@@ -64,16 +60,64 @@ section > div {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 2rem; /* dunno if it's better actually */
+    padding: 0 2.625rem;
 }
 
 footer {
     margin: 3rem 0 0;
-    padding: 2.35rem 2rem;
+    padding: 2.35rem 2rem 1.35rem;
 
     border: solid #d5d5d5 1px;
     border-top-left-radius: 1.35rem;
     border-top-right-radius: 1.35rem;
+
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 2rem 0 1.35rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2rem;
+    /* margin-bottom: 2rem; */
+}
+
+a {
+    color: var(--link);
+
+    position: relative;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--link-hover);
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--link-hover);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+a:hover::before {
+    transform: scaleX(1);
 }
 
 .btn {
@@ -107,8 +151,6 @@ footer {
 }
 
 .divider {
-    /*width: 100%;
-    border-top: 1px solid #DADADA;*/
     font-size: 4rem;
     color: #dadada;
     line-height: 0;
@@ -117,7 +159,17 @@ footer {
 }
 
 .clickable {
-    cursor: pointer
+    transition: 200ms;
+
+    display: inline-block;
+    width: fit-content;
+    
+    cursor: pointer;
+}
+
+.clickable:hover,
+.clickable:focus {
+    color: darkgray;
 }
 
 #hero {
