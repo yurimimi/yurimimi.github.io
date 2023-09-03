@@ -16,17 +16,22 @@ body {
     width: 100%;
     min-height: 100%;
 
-    background-color: var(--background);
+    background-color: var(--gray-light-20);
     color: black;
 
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     line-height: 1.35;
 
-    background-color: var(--background);
+    background-color: var(--gray-light-20);
     opacity: 1;
     background-size: 26px 26px;
-    background-image:  repeating-linear-gradient(to right, #d5d5d5, #d5d5d5 1.3px, var(--background) 1.3px, var(--background));
+    background-image:  repeating-linear-gradient(
+        to right,
+        var(--gray),
+        var(--gray) 1.3px,
+        var(--gray-light-20) 1.3px,
+        var(--gray-light-20));
 }
 
 h1,
@@ -49,7 +54,7 @@ main {
     height: 100%;
     margin: 0 auto;
 
-    background-color: var(--background);
+    background-color: var(--gray-light-20);
 }
 
 section {
@@ -64,14 +69,15 @@ section > div {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
+    padding: 0 8rem;
 }
 
 footer {
     margin: 3rem 0 0;
     padding: 2.35rem 2rem;
 
-    border: solid #d5d5d5 1px;
+    border: solid var(--gray) 1px;
     border-top-left-radius: 1.35rem;
     border-top-right-radius: 1.35rem;
 }
@@ -98,19 +104,19 @@ footer {
 }
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: var(--primary-hover);
+    background-color: var(--primary-light);
 }
 
 .btn-primary:focus {
-    outline: 4px solid #EC8698;
+    outline: 4px solid var(--pink);
     outline-offset: 0.5rem;
 }
 
 .divider {
     /*width: 100%;
-    border-top: 1px solid #DADADA;*/
+    border-top: 1px solid var(--gray-light-10);*/
     font-size: 4rem;
-    color: #dadada;
+    color: var(--gray-light-10);
     line-height: 0;
     text-align: center;
     user-select: none;
