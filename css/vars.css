@@ -3,8 +3,11 @@
 
 :root {
     --primary: #FF4062;
-    --primary-hover: #FF5372;
-    --background: #F3F3F3;
-    --link: #127096;
-    --link-hover: #1B89B5;
+    --primary-light: #FF5372;
+
+    --gray: #D5D5D5;
+    --gray-light-10: #DADADA;
+    --gray-light-20: #F3F3F3;
+    
+    --pink: #EC8698;
 }
