@@ -1,0 +1,58 @@
+#lang-select-wrapper {
+    z-index: 999;
+    position: fixed;
+    top: 1rem;
+    /* There's a problem with <800px width */
+    left: calc(50vw + (800px/2 - 4rem));
+}
+
+@media (max-width: 800px) {
+    #lang-select-wrapper {
+        left: calc(100vw - 4rem);
+    }
+}
+
+#language-select-form {
+    position: sticky;
+    top: 1rem;
+    right: 1rem;
+}
+
+#language-select-form > label {
+    display: none;
+}
+
+#language-select-form > select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    transition: 200ms;
+
+    width: 3rem;
+    height: 3rem;
+
+    background: var(--gray-light-20);
+    border: 1.3px var(--gray) solid;
+    border-radius: 50%;
+
+    font-family: var(--font-inter);
+    font-weight: 500;
+    text-align: center;
+    color: var(--gray-dark-20);
+    text-transform: uppercase;
+}
+
+#language-select-form > select:focus {
+    background: var(--gray-light-10);
+    border: 1.3px var(--gray-dark-10) solid;
+    outline: 0.5px var(--gray-dark-10) solid;
+
+    color: black;
+}
+
+#language-select-form > select:hover {
+    background: var(--gray-light-10);
+
+    color: black;
+}

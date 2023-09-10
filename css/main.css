@@ -59,7 +59,7 @@ section > div {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    padding: 0 5rem;
+    padding: 0 4.5rem;
     /* padding: 0 2rem; */
 }
 
@@ -246,6 +246,7 @@ section[id="projects"] li div {
 }
 
 section[id="projects"] a {
+    display: block;
     color: inherit;
 }
 
@@ -258,6 +259,15 @@ section[id="projects"] a > div:focus {
     background: var(--blue);
     /* outline: 3.5px solid var(--gray-dark-10); */
     outline: 3.5px solid white;
+}
+
+section[id="projects"] a::before {
+    display: none;
+}
+
+.tile-wip {
+    color: var(--gray-dark-10);
+    font-weight: 500;
 }
 
 .btn {
