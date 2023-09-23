@@ -1,0 +1,77 @@
+@media (width < 480px) {
+    main {
+        width: 374px;
+    }
+
+    section > div {
+        padding: 0 0.95rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+    }
+
+    .btn {
+        margin: 0.25rem;
+        padding: 1.15rem 1.55rem;
+    }
+
+    #heading-name {
+        margin-top: 0;
+        margin-bottom: .75rem;
+        font-size: 1.25rem;
+    }
+
+    #heading-title {
+        margin-top: 0;
+        margin-bottom: 2.15rem;
+        margin-bottom: 1.65rem;
+        font-size: 1.95rem;
+    }
+    
+    #hero-text {
+        margin: 0 0 2.15rem 0;
+    }
+
+    section[id="about"] h1,
+    section[id="about"] h2 {
+        margin: 2.15rem 0 .8em;
+        font-size: 1.5rem;
+    }
+
+    section[id="projects"] h1 {
+        text-align: center;
+        margin: 0 0 1.85em;
+        font-size: 1.5rem;
+    }
+
+    section[id="projects"] ul {
+        grid-template-columns: 1fr;
+    
+        gap: 1.2rem;
+    }
+
+    section[id="socials"] {
+        height: 56vh;
+    }
+
+    section[id="socials"] > div {
+        width: 100%;
+        padding: 20px;
+    
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: 1.1rem;
+    }
+
+    section[id="socials"] button:not([id="email-me"]) {
+        height: 3rem;
+        font-size: 1rem;
+    }
+}
